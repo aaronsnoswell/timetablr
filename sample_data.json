@@ -10,6 +10,7 @@ app for further editing.
 Nice to have's:
  - Share to facebook, twitter
  - User preferences stored to localstorage / cookies
+ - Snazzy .er or .lr domain? timetab.lr? timetab.er?
 
 Proposed approach:
  - Twitter Bootstrap for html, css (http://twitter.github.com/bootstrap/)
@@ -114,6 +115,12 @@ Timetable JSON spec
         }
     ]
 }
+
+
+Sample of generated html markup
+===============================
+
+
 
 
 Formatting Options
