@@ -1,0 +1,145 @@
+
+@header-height: 40px;
+
+@cell-width: 150px;
+@cell-height: 70px;
+
+@rowlabel-width: 50px;
+@rowlabel-height: 40px;
+
+// Misc vars
+@padding-medium: 8px;
+@padding-small: 4px;
+@icon-size: 22px;
+
+@dim-color: #fafafa;
+@border-color: #ddd;
+
+
+// Global styles
+.timetable {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.right {
+    float: right;
+}
+
+
+.timetable {
+    position: relative;
+
+    padding-bottom: @rowlabel-height*0.5;
+
+    table {
+        position: relative;
+        border-collapse: collapse;
+        left: @rowlabel-width + @padding-medium;
+
+        thead {
+            tr {
+                td {
+                    height: @header-height;
+                    vertical-align: bottom;
+                    padding-bottom: @padding-small;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+
+                td {
+                    width: @cell-width;
+                    height: @cell-height;
+
+                    border: 1px solid @border-color;
+                }
+            }
+
+            .dim {
+                background: @dim-color;
+            }
+        }
+
+        tr {
+            td {
+                text-align: center;
+                box-sizing: border-box;
+                overflow: visible;
+                padding: 0px;
+                vertical-align: top;
+
+                .clazz {
+                    position: absolute;
+                    width: @cell-width;
+                    height: @cell-height;
+                    box-sizing: border-box;
+
+                    // Border and background color are set in second pass
+                    border-radius: 8px;
+                    border-width: 1px;
+                    border-style: solid;
+
+                    .name, .location, .notes {
+                        position: relative;
+                        z-index: 1;
+                    }
+
+                    .gradient {
+                        position: absolute;
+                        z-index: 0;
+                        top: 0px;
+                        left: 0px;
+                        width: 100%;
+                        height: 100%;
+
+                        background: -moz-linear-gradient(top, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+                        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.4)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+                        background: -webkit-linear-gradient(top, rgba(255,255,255,0.4) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+                        background: -o-linear-gradient(top, rgba(255,255,255,0.4) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+                        background: -ms-linear-gradient(top, rgba(255,255,255,0.4) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+                        background: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%,rgba(255,255,255,0) 100%); /* W3C */
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28ffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+                    }
+                }
+            }
+        }
+        
+        .hidden {
+            display: none;
+        }
+    }
+
+    .rowlabels {
+        position: absolute;
+        top: 0px;
+
+        div {
+            position: relative;
+            width: @rowlabel-width;
+            height: @rowlabel-height;
+            float: left;
+            clear: both;
+
+            text-align: right;
+            line-height: @rowlabel-height;
+            margin-top: @cell-height - @rowlabel-height;
+
+        }
+
+        div.hidden + div {
+            margin-top: @header-height - @rowlabel-height*0.5;
+        }
+
+    }
+
+
+}
+
+
+

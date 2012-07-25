@@ -1,0 +1,333 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    
+    <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+         More info: h5bp.com/b/378 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Timetablr</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Mobile viewport optimized: h5bp.com/viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+    
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+</head>
+<body>
+    <header>
+    
+    </header>
+    <div role="main">
+        
+        <div class="timetable">
+
+            <table>
+                <thead>
+                    <tr class="header">
+                        <td>Sunday</td>
+                        <td>Monday</td>
+                        <td>Tuesday</td>
+                        <td>Wednesday</td>
+                        <td>Thursday</td>
+                        <td>Friday</td>
+                        <td>Saturday</td>
+                        <td class="hidden">Sunday</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 4-5am row -->
+                    <tr class="dim hidden">
+                        <td class="dim"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                    <!-- 5-6am row -->
+                    <tr class="dim hidden">
+                        <td class="dim"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                    <!-- 6-7am row -->
+                    <tr class="dim hidden">
+                        <td class="dim"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                    <!-- 7-8am row -->
+                    <tr class="dim">
+                        <td class="dim"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                    <!-- 8-9am row -->
+                    <tr class="dim">
+                        <td class="dim"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                    <!-- 9-10am row -->
+                    <tr>
+                        <td class="dim"></td>
+                        <td></td>
+                        <td>
+                            <div class="clazz" data-color="#ff00dd">
+                                <div class="name">MECH2100 L</div>
+                                <div class="location">80-2.171</div>
+                                <div class="notes"></div>
+                                <div class="gradient"></div>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                    <!-- 10-11am row -->
+                    <tr>
+                        <td class="dim"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                    <!-- 11am-12pm row -->
+                    <tr>
+                        <td class="dim"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                    <!-- 12-1pm row -->
+                    <tr>
+                        <td class="dim"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                    <!-- 1-2pm row -->
+                    <tr>
+                        <td class="dim"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                    <!-- 2-3pm row -->
+                    <tr>
+                        <td class="dim"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                    <!-- 3-4pm row -->
+                    <tr>
+                        <td class="dim"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                    <!-- 4-5pm row -->
+                    <tr>
+                        <td class="dim"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                    <!-- 5-6pm row -->
+                    <tr class="dim">
+                        <td class="dim"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                    <!-- 6-7pm row -->
+                    <tr class="dim hidden">
+                        <td class="dim"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                    <!-- 7-8pm row -->
+                    <tr class="dim hidden">
+                        <td class="dim"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                    <!-- 8-9pm row -->
+                    <tr class="dim hidden">
+                        <td class="dim"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                    <!-- 9-10pm row -->
+                    <tr class="dim hidden">
+                        <td class="dim"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                    <!-- 10-11pm row -->
+                    <tr class="dim hidden">
+                        <td class="dim"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="dim"></td>
+                        <td class="dim hidden"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rowlabels">
+                <div class="hidden">4am</div>
+                <div class="hidden">5am</div>
+                <div class="hidden">6am</div>
+                <div>7am</div>
+                <div>8am</div>
+                <div>9am</div>
+                <div>10am</div>
+                <div>11am</div>
+                <div>12am</div>
+                <div>1pm</div>
+                <div>2pm</div>
+                <div>3pm</div>
+                <div>4pm</div>
+                <div>5pm</div>
+                <div>6pm</div>
+                <div class="hidden">7pm</div>
+                <div class="hidden">8pm</div>
+                <div class="hidden">9pm</div>
+                <div class="hidden">10pm</div>
+                <div class="hidden">11pm</div
+            </div>
+
+        </div>
+
+
+    </div>
+    <footer>
+        
+    </footer>
+    
+    
+    <!-- JavaScript at the bottom for fast page loading -->
+    
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+    
+    
+    <!-- scripts concatenated and minified via build script -->
+    <script defer src="js/bootstrap.min.js"></script>
+    <!-- end scripts -->
+    
+    
+    <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+         mathiasbynens.be/notes/async-analytics-snippet -->
+    <script>
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+    
+    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+         chromium.org/developers/how-tos/chrome-frame-getting-started -->
+    <!--[if lt IE 7 ]>
+    <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    <![endif]-->
+    
+</body>
+</html>
+

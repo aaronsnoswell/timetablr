@@ -1,0 +1,64 @@
+
+<h1>Make a timetable</h1>
+
+<form class="well">
+    <label>School Name:</label>
+    <input ng-model="timetable.school" type="text" />
+
+    <h2>Subjects</h2>
+
+    <a href="" ng-click="addSubject()" class="btn" >Add Subject</a>
+
+    <br /><br />
+
+    <div ng-repeat="subject in timetable.subjects" class="well" style="background-color:{{subject.color}}">
+        
+        <span class="input-append">
+            <input ng-model="subject.name" type="text" placeholder="Subject Name" class="input-medium" ><a class="btn add-on" ng-model="subject.color" data-color="{{subject.color}}" colorpicker><i class="icon-tint"></i></a>
+        </span>
+
+        <a href="" ng-click="removeSubject(subject)" class="btn btn-danger right" ><i class="icon-trash icon-white"></i> Delete</a>
+
+        <hr />
+
+        <a href="" ng-click="addClazz(subject)" >Add clazz</a>
+        <div ng-repeat="clazz in subject.clazzes">
+
+            <input ng-model="clazz.name" />
+            <a href="" ng-click="removeClazz(subject, clazz)" >X</a>
+
+            <a href="" ng-click="addSession(clazz)" >Add Session</a>
+            <div ng-repeat="session in clazz.sessions">
+
+                <label for="dow" />
+                <select id="DOW" ng-model="session.DOW">
+                    <option value="0">Monday</option>
+                    <option value="1">Tuesday</option>
+                    <option value="2">Wednesday</option>
+                    <option value="3">Thursday</option>
+                    <option value="4">Friday</option>
+                    <option value="5">Saturday</option>
+                    <option value="6">Sunday</option>
+                </select>
+
+                <label for="start" />
+                <input id="start" ng-model="session.start" />
+
+                <label for="end" />
+                <input id="end" ng-model="session.end" />
+
+                <label for="location" />
+                <input id="location" ng-model="session.location" />
+
+                <label for="info" />
+                <input id="info" ng-model="session.info" />
+
+                <a href="" ng-click="removeSession(clazz, session)" >X</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</form>

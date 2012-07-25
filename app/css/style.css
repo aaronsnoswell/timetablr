@@ -1,0 +1,102 @@
+.timetable {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.right {
+  float: right;
+}
+.timetable {
+  position: relative;
+  padding-bottom: 20px;
+}
+.timetable table {
+  position: relative;
+  border-collapse: collapse;
+  left: 58px;
+}
+.timetable table thead tr td {
+  height: 40px;
+  vertical-align: bottom;
+  padding-bottom: 4px;
+}
+.timetable table tbody tr td {
+  width: 150px;
+  height: 70px;
+  border: 1px solid #dddddd;
+}
+.timetable table tbody .dim {
+  background: #fafafa;
+}
+.timetable table tr td {
+  text-align: center;
+  box-sizing: border-box;
+  overflow: visible;
+  padding: 0px;
+  vertical-align: top;
+}
+.timetable table tr td .clazz {
+  position: absolute;
+  width: 150px;
+  height: 70px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+}
+.timetable table tr td .clazz .name,
+.timetable table tr td .clazz .location,
+.timetable table tr td .clazz .notes {
+  position: relative;
+  z-index: 1;
+}
+.timetable table tr td .clazz .gradient {
+  position: absolute;
+  z-index: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.4)), color-stop(100%, rgba(255, 255, 255, 0)));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C */
+
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#28ffff', endColorstr='#00ffffff', GradientType=0);
+  /* IE6-9 */
+
+}
+.timetable table .hidden {
+  display: none;
+}
+.timetable .rowlabels {
+  position: absolute;
+  top: 0px;
+}
+.timetable .rowlabels div {
+  position: relative;
+  width: 50px;
+  height: 40px;
+  float: left;
+  clear: both;
+  text-align: right;
+  line-height: 40px;
+  margin-top: 30px;
+}
+.timetable .rowlabels div.hidden + div {
+  margin-top: 20px;
+}
