@@ -8,15 +8,15 @@ be able to save timetables to a .tbl text file that can be drag-dropped back int
 app for further editing.
 
 Nice to have's:
- - Share to facebook, twitter
- - User preferences stored to localstorage / cookies
- - Snazzy .er or .lr domain? timetab.lr? timetab.er?
- - ASCII-art easter egg in saved files
+ * Share to facebook, twitter
+ * User preferences stored to localstorage / cookies
+ * Snazzy .er or .lr domain? timetab.lr? timetab.er?
+ * ASCII-art easter egg in saved files
 
 Proposed approach:
- - Twitter Bootstrap for html, css (http://twitter.github.com/bootstrap/)
- - AngularJS for js (http://angularjs.org/)
- - Minimal ?php? or Node.js for server-side stuff (nodejitsu for cloud hosting?)
+ * Twitter Bootstrap for html, css (http://twitter.github.com/bootstrap/)
+ * AngularJS for js (http://angularjs.org/)
+ * Minimal ?php? or Node.js for server-side stuff (nodejitsu for cloud hosting?)
 
 NB: Input fields such as session location and subject name should auto-complete with a
 list of data tied to the entered school that is built up gradually from data entered by users.
@@ -24,6 +24,7 @@ list of data tied to the entered school that is built up gradually from data ent
 
 ## Timetable JSON spec
 
+{{{
 "timetable" : {
     "name": "Semester 2, 2012",
     "school": "UQ",
@@ -115,10 +116,11 @@ list of data tied to the entered school that is built up gradually from data ent
         }
     ]
 }
-
+}}}
 
 ## Sample of generated html markup
 
+{{{
 <div class="timetable">
 
     <div class="rowlabel 0">4am</div>
@@ -323,69 +325,70 @@ list of data tied to the entered school that is built up gradually from data ent
             </tr>
             <!-- 7-8pm row -->
             <tr>
+                <td class="dim"></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="dim"></td>
+                <td class="dim"></td>
             </tr>
             <!-- 8-9pm row -->
             <tr>
+                <td class="dim"></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="dim"></td>
+                <td class="dim"></td>
             </tr>
             <!-- 9-10pm row -->
             <tr>
+                <td class="dim"></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="dim"></td>
+                <td class="dim"></td>
             </tr>
             <!-- 10-11pm row -->
             <tr>
+                <td class="dim"></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="dim"></td>
+                <td class="dim"></td>
             </tr>
         </tbody>
     </table>
 </div>
+}}}
 
 ## User-configurable options
 
 ##  Formatting Options
-First day of week: *Monday, Sunday
-Timetable Start time: 4, 5, 6, *7, 8, 9, 10
-Timetable Stop time: 4, 5, *6, 7, 8, 9, 10, 11
-Weeday Label Format: *Sunday, Sun, SUN, S, Hidden
-Time Label Format: *6pm, 9PM, 6p, 1800, 18:00, Hidden
+ * First day of week: *Monday, Sunday
+ * Timetable Start time: 4, 5, 6, *7, 8, 9, 10
+ * Timetable Stop time: 4, 5, *6, 7, 8, 9, 10, 11
+ * Weeday Label Format: *Sunday, Sun, SUN, S, Hidden
+ * Time Label Format: *6pm, 9PM, 6p, 1800, 18:00, Hidden
 
 ### Display Options
-*Show / Hide title
-*Show / Hide Saturday
-*Show / Hide Sunday
-Page orientation: *Landscape / Portrait
-Shade weekends: *T / F
-Shade hours outside 9-5: *T / F
-1/2 Hour Marks: On / *Off
+ * *Show / Hide title
+ * *Show / Hide Saturday
+ * *Show / Hide Sunday
+ * Page orientation: *Landscape / Portrait
+ * Shade weekends: *T / F
+ * Shade hours outside 9-5: *T / F
+ * 1/2 Hour Marks: On / *Off
 
 
 
